@@ -40,7 +40,6 @@ public class CalculatorController {
                     num ="";
                 }
             }
-            System.out.println(arrayExpression);
             if (errorDetector2(arrayExpression)) {
                 while (arrayExpression.contains("×") || arrayExpression.contains("÷")) {
                     for (int i = 0; i < arrayExpression.size(); i++) {
