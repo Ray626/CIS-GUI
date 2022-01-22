@@ -4,7 +4,10 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+
+import java.io.File;
 import java.util.ArrayList;
+import javafx.scene.media.*;
 
 public class CalculatorController {
     @FXML
@@ -15,11 +18,16 @@ public class CalculatorController {
 
     @FXML
     public void buttonOnClickBasic(Event event) {
+
         Button button = (Button) event.getTarget();
         if (expression.length()< TextfieldMaxLength){
             expression += button.getText();
         }
         display.setText(expression);
+        String sound = "C:\\Users\\99926\\Desktop\\Rick Astley - Never Gonna Give You Up (Official Music Video).mp3";
+        Media song = new Media(new File(sound).toURI().toString());
+        MediaPlayer songs = new MediaPlayer(song);
+        songs.play();
     }
     //Arithmetic symbol:  +, −, ×, ÷
     public void buttonEqual(){
@@ -154,6 +162,9 @@ public class CalculatorController {
             }
         }
         return true;
+    }
+    public void sounds(){
+
     }
 
 }
