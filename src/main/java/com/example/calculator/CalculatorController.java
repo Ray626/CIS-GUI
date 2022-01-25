@@ -24,10 +24,10 @@ public class CalculatorController {
             expression += button.getText();
         }
         display.setText(expression);
-        String sound = "C:\\Users\\99926\\Desktop\\Rick Astley - Never Gonna Give You Up (Official Music Video).mp3";
-        Media song = new Media(new File(sound).toURI().toString());
-        MediaPlayer songs = new MediaPlayer(song);
-        songs.play();
+        //String sound = "C:\\Users\\99926\\Desktop\\Rick Astley - Never Gonna Give You Up (Official Music Video).mp3";
+        //Media song = new Media(new File(sound).toURI().toString());
+        //MediaPlayer songs = new MediaPlayer(song);
+        //songs.play();
     }
     //Arithmetic symbol:  +, −, ×, ÷
     public void buttonEqual(){
@@ -111,6 +111,9 @@ public class CalculatorController {
     public void buttonClear(){
         expression = "";
         display.setText(expression);
+        for(int i = 0; i<arrayExpression.size();i++){
+            arrayExpression.remove(0);
+        }
     }
     public boolean errorDetector1(String error){
         for(int i1 = 0; i1 < error.length(); i1++){

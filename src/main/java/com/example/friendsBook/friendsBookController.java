@@ -1,10 +1,11 @@
-package com.example.friendBook;
+package com.example.friendsBook;
 
 import javafx.fxml.FXML;
+
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
-public class friendBookController {
+public class friendsBookController {
     /**
      * ALl variables on the "Add Friend" page
      */
@@ -35,8 +36,8 @@ public class friendBookController {
     }
     public void addFriend(){
         if (aFirstName.getText().equals("")||aLastName.getText().equals("")
-        ||aAge.getText().equals("")||aEmail.getText().equals("")||aPhoneNum.getText().equals("")
-        ||aGender.getText().equals("Choose Gender")){
+                ||aAge.getText().equals("")||aEmail.getText().equals("")||aPhoneNum.getText().equals("")
+                ||aGender.getText().equals("Choose Gender")){
             System.out.println("Invalid ");
         }else{
             Friend friend = new Friend(aFirstName.getText(),aLastName.getText(),aGender.getText(), Integer.parseInt(aAge.getText()) ,Long.parseLong(aPhoneNum.getText()),aEmail.getText());

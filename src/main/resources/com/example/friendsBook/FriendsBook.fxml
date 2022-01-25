@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.friendsBook.friendsBookController">
+    <children>
+        <TabPane prefHeight="402.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Create Friend">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="aFirstName" layoutX="143.0" layoutY="70.0">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </TextField>
+                                <Text layoutX="143.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="aLastName" layoutX="305.0" layoutY="70.0">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </TextField>
+                                <Text layoutX="305.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="143.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="aAge" layoutX="143.0" layoutY="130.0" prefHeight="27.0" prefWidth="80.0">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </TextField>
+                                <Text layoutX="143.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="aPhoneNum" layoutX="143.0" layoutY="190.0" prefHeight="27.0" prefWidth="223.0">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </TextField>
+                                <Text layoutX="305.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="147.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="aEmail" layoutX="143.0" layoutY="250.0" prefHeight="27.0" prefWidth="220.0">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </TextField>
+                                <Button fx:id="generate" alignment="CENTER" contentDisplay="CENTER" layoutX="265.0" layoutY="308.0" mnemonicParsing="false" onAction="#addFriend" text="Generate">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Button>
+                                <MenuButton fx:id="aGender" layoutX="304.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#GenderMenuButton" text="Choose Gender">
+                                    <items>
+                                        <MenuItem fx:id="aMale" mnemonicParsing="false" text="Male" />
+                                        <MenuItem fx:id="aFemale" mnemonicParsing="false" text="Female" />
+                                        <MenuItem fx:id="aOthers" mnemonicParsing="false" text="Others" />
+                                    </items>
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </MenuButton>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Display Friend">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="displayList" onMouseClicked="#displayInfo" prefHeight="372.0" prefWidth="250.0" />
+                                <Text layoutX="370.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friend's Info">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="300.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friend's Name: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="dName" layoutX="390.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLANK">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="300.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="dAge" layoutX="329.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLANK">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="300.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="dGender" layoutX="350.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLANK">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="300.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone#: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="dPhoneNum" layoutX="350.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLANK">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="300.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: ">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="dEmail" layoutX="337.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BLANK">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Text>
+                                <Button fx:id="deleteFriendBtn" disable="true" layoutX="381.0" layoutY="278.0" mnemonicParsing="false" onAction="#deleteFriend" text="BELETE FRIEND" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>

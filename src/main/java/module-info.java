@@ -8,5 +8,6 @@ module com.example {
 
     opens com.example.calculator;
     opens com.example.friendBook;
+    opens com.example.friendsBook;
 
 }
