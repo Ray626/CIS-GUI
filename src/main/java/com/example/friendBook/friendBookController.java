@@ -52,12 +52,15 @@ public class friendBookController {
     public void displayInfo(){
         if(displayList.getItems().size() > 0){
             Friend friendInList = displayList.getSelectionModel().getSelectedItem();
-            dName.setText(friendInList.getName());
-            dAge.setText(String.valueOf(friendInList.getAge()));
-            dGender.setText(friendInList.getGender());
-            dPhoneNum.setText(String.valueOf(friendInList.getPhoneNumber()));
-            dEmail.setText(friendInList.getEmail());
-            deleteFriendBtn.setDisable(false);
+            if(friendInList!=null){
+                dName.setText(friendInList.getName());
+                dAge.setText(String.valueOf(friendInList.getAge()));
+                dGender.setText(friendInList.getGender());
+                dPhoneNum.setText(String.valueOf(friendInList.getPhoneNumber()));
+                dEmail.setText(friendInList.getEmail());
+                deleteFriendBtn.setDisable(false);
+            }
+
         }
 
 
@@ -69,8 +72,7 @@ public class friendBookController {
         dGender.setText("BLANK");
         dPhoneNum.setText("BLANK");
         dEmail.setText("BLANK");
-        if (displayList.getItems().size() < 1){
-            deleteFriendBtn.setDisable(true);
-        }
+        deleteFriendBtn.setDisable(true);
+
     }
 }

@@ -62,7 +62,6 @@ public class friendsBookController {
             aAge.clear();
             aPhoneNum.clear();
             aEmail.clear();
-            //displayList.getItems().add(friend);
 
         }
     }
