@@ -98,7 +98,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <ListView fx:id="displayList" onMouseClicked="#displayInfo" prefHeight="372.0" prefWidth="250.0" />
-                        <Text layoutX="370.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friend's Info">
+                        <Text layoutX="364.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friend's Info">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -153,7 +153,7 @@
                               <Font size="13.0" />
                            </font>
                         </Text>
-                        <Button fx:id="deleteFriendBtn" disable="true" layoutX="381.0" layoutY="278.0" mnemonicParsing="false" onAction="#deleteFriend" text="BELETE FRIEND" />
+                        <Button fx:id="deleteFriendBtn" disable="true" layoutX="381.0" layoutY="278.0" mnemonicParsing="false" onAction="#deleteFriend" text="DELETE FRIEND" />
                      </children></AnchorPane>
               </content>
             </Tab>

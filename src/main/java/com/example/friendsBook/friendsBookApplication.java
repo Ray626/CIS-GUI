@@ -12,6 +12,7 @@ public class friendsBookApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(com.example.friendsBook.friendsBookApplication.class.getResource("FriendsBook.fxml"));
+        System.out.println(fxmlLoader.getLocation().toString());
         Scene scene = new Scene(fxmlLoader.load(), 600,400);
         stage.setTitle("friendsBook");
         stage.setScene(scene);

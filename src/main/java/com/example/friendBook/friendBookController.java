@@ -57,7 +57,7 @@ public class friendBookController {
             dGender.setText(friendInList.getGender());
             dPhoneNum.setText(String.valueOf(friendInList.getPhoneNumber()));
             dEmail.setText(friendInList.getEmail());
-            //deleteFriendBtn.setDisable(false);
+            deleteFriendBtn.setDisable(false);
         }
 
 
